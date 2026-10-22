@@ -48,7 +48,7 @@ export default function CountDown({ targetDate }) {
       {units.map(({ key, label }) => (
         <Card
           key={key}
-          className="countdown-panel flex min-w-0 flex-col items-center justify-center gap-2 rounded-none border-primary/30 bg-primary/3 px-1 py-5 shadow-none sm:py-6"
+          className="countdown-panel flex min-w-0 flex-col items-center justify-center gap-2 rounded-none border-primary/30 bg-primary/3 px-1 py-4 shadow-none sm:py-5"
         >
           <span className="font-mono text-2xl font-semibold tabular-nums text-primary sm:text-4xl">
             {String(time[key]).padStart(2, "0")}

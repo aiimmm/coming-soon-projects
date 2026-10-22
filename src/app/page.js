@@ -34,6 +34,10 @@ export async function generateMetadata() {
     };
   }
 
+  if (config.metadata) {
+    return config.metadata;
+  }
+
   return {
     title: `${config.title} | ${config.name}`,
     description: config.description,
@@ -94,9 +98,9 @@ export default async function HomePage() {
   if (!config) notFound();
 
   return (
-    // lg:h-svh -> di desktop tinggi halaman dikunci satu layar (tidak bisa di-scroll).
-    // Di mobile/tablet tetap min-h-svh supaya konten boleh memanjang jika perlu.
-    <main className="hacker-page relative flex min-h-svh flex-col overflow-hidden bg-background px-5 py-5 text-foreground sm:px-8 sm:py-7 2xl:h-svh">
+    // lg:h-dvh -> di desktop tinggi halaman dikunci satu layar (tidak bisa di-scroll).
+    // Di mobile/tablet tetap min-h-dvh supaya konten boleh memanjang jika perlu.
+    <main className="hacker-page relative flex min-h-dvh flex-col overflow-hidden bg-background px-5 py-5 text-foreground sm:px-8 sm:py-7 2xl:h-dvh">
       {/* Layer background */}
       <MatrixRain />
       <div className="hacker-grid pointer-events-none absolute inset-0" />

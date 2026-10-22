@@ -34,7 +34,7 @@ export default async function NotFound() {
   ];
 
   return (
-    <main className="hacker-page relative flex min-h-svh flex-col overflow-hidden bg-background px-5 py-5 text-foreground sm:px-8 sm:py-7">
+    <main className="hacker-page relative flex min-h-dvh flex-col overflow-hidden bg-background px-5 py-5 text-foreground sm:px-8 sm:py-6">
       {/* Layer background */}
       <MatrixRain />
       <div className="hacker-grid pointer-events-none absolute inset-0" />
